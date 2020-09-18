@@ -1,4 +1,37 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Hospital Management
+
+Hospital Management is a Laravel based web application for dealing with hospital management system.
+
+## Installation
+
+Import the database file in the root of this package.
+
+## Usage
+```code
+==> Admin <==
+admin@hmime.com
+12345678
+
+==> Doctor <==
+doctor@hmime.com
+12345678
+
+==> Receptionist <==
+receptionist@hmime.com
+12345678
+
+==> Patient <==
+patient@hmime.com
+12345678
+```
+## Preview
+![alt text](https://github.com/hmimeee/hospital-management/blob/master/preview.png?raw=true)
+
+## Demo
+[Hospital Management](https://hospital.hmime.com)
+
+
+<p align="center"><img src="https://github.com/laravel/art/blob/master/legacy/Laravel-l-slant.svg" width="400"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
