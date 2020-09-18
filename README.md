@@ -6,6 +6,7 @@ Hospital Management is a Laravel based web application for dealing with hospital
 
 Import the database file in the root of this package.
 
+
 ## Usage
 ```code
 ==> Admin <==
