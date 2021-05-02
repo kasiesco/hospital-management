@@ -16,7 +16,7 @@
 <body>
 
     <!-- ################# Header Starts Here#######################--->
-    
+
     <header id="menu-jk">
 
         <div id="nav-head" class="header-nav">
@@ -37,7 +37,6 @@
                             @endif
                             <li><a href="#doctors">Doctors</a></li>
                             <li><a href="#about_us">About</a></li>
-                            <li><a href="#gallery">Gallery</a></li>
                             <li><a href="#contact_us">Contact Us</a></li>
                         </ul>
                     </div>
@@ -49,7 +48,7 @@
             </div>
         </div>
     </header>
-    
+
     <!-- ################# Slider Starts Here#######################--->
 
     <div class="slider-detail">
@@ -207,7 +206,7 @@
     </div>
 
 </div>
-</section>  
+</section>
 
 <!--  ************************* About Us Starts Here ************************** -->
 
@@ -228,11 +227,11 @@
             </p>
         </div>
     </div>
-</section>    
+</section>
 
 
 <!--  ************************* Gallery Starts Here ************************** -->
-<div id="gallery" class="gallery">    
+<div id="gallery" class="gallery">
  <div class="container">
   <div class="inner-title">
 
@@ -324,7 +323,7 @@
         </div>
 
     </div>
-    
+
 </body>
 
 <script src="assets/ext/js/jquery-3.2.1.min.js"></script>
