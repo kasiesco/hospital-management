@@ -193,7 +193,8 @@
                      <div class="blog-single-det">
                         <h6>{{$doctor->name}}</h6>
                         <span>Since: {{$doctor->created_at ?? date_format($doctor->created_at, 'd-m-Y')}}</span>
-                        <p>Fee: {{App\DoctorFee::where('doctor',$doctor->id)->first()->amount}}</p>
+                        @php($data = \App\DoctorFee::where('doctor',$doctor->id)->first())
+                        <p>Fee: {{$data ? $data->amount : '--'}}</p>
                         <a href="/appointments/create?doctor={{$doctor->id}}">
                             <button class="btn btn-success btn-sm">Book Appointment</button>
                         </a>

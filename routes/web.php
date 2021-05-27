@@ -40,6 +40,8 @@ Route::delete('/profile/delete', 'ProfileController@destroy')->name('profile.del
 
 //User Management
 Route::get('/users', 'UserController@index')->name('admin.users')->middleware('auth');
+Route::get('/users/create', 'UserController@create')->name('admin.user.create')->middleware('auth');
+Route::post('/users/create', 'UserController@store')->name('admin.user.store')->middleware('auth');
 Route::get('/users/{user}', 'UserController@show')->name('admin.user')->middleware('auth');
 Route::post('/users/{user}', 'UserController@update')->name('admin.user.update')->middleware('auth');
 Route::get('/users/{user}/delete', 'UserController@destroy')->name('admin.user.delete')->middleware('auth');

@@ -26,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.createUser');
     }
 
     /**
@@ -37,7 +37,39 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'photo' => 'mimes:jpeg,png,jpg,bmp,PNG,gif|max:2048',
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'role' => 'required',
+            'dob' => 'required',
+            ]);
+        $file = request()->photo;
+
+        if ($file !=null) {
+            $filename = 'avatar_'.time().'.'.$file->getClientOriginalExtension();
+            $path = '/uploads/users/';
+            $file->move(public_path().$path,$filename);
+            $photo = $path.$filename;
+        } else {
+            $photo =null;
+        }
+
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'dob' => $request->dob,
+            'country' => $request->country,
+            'city' => $request->city,
+            'address' => $request->address,
+            'role' => $request->role,
+            'photo' => $photo,
+            'password' => bcrypt($request->password)
+        ])->save();
+
+        return redirect(route('admin.user.create'))->with('success', 'User created successfully!');
     }
 
     /**

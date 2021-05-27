@@ -23,8 +23,11 @@
 @endif
 <div class="col-md-12">
 	<div class="card">
-		<div class="card-header">
-			<h4 class="card-title"> Users</h4>
+		<div class="card-header row">
+			<h4 class="card-title col-6"> Users</h4>
+			<div class="text-right col-6">
+				<a href="{{route('admin.user.create')}}" class="btn btn-primary">Add User</a>
+			</div>
 		</div>
 		<div class="card-body">
 			<div class="table-responsive">
